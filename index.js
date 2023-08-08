@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/metrics", (req, res) => {
-  res.send(JSON.stringify({ accessCounter: counter }));
+  res.send(`access_counter ${counter}`);
 });
 
 app.listen(3000, () => console.log("Example app is listening on port 3000."));
